@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="hordozok" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="80b250d3-e1ea-4f21-9464-ddc416b02169">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="gyarto" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{gyarto}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="meret" class="java.lang.String"/>
+	<parameter name="tipus" class="java.lang.String"/>
+	<parameter name="allapot" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nev" class="java.lang.String"/>
+	<field name="gyarto" class="java.lang.String"/>
+	<field name="meret" class="java.lang.String"/>
+	<field name="tipus" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="0" width="100" height="30" uuid="e430b9cf-23f7-4d7b-b44a-fac7921beae6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="167" y="0" width="220" height="41" uuid="a8e7e85d-0f84-4806-b9e9-fbd24898831c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hordozók listája]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="40" width="539" height="1" uuid="0adcc627-0626-4a36-92fd-5983fd3252a5"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="70" width="60" height="20" uuid="0b1327a5-a738-460a-823c-f40014f9e6c0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gyártó:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="60" height="20" uuid="1f8563bd-6f6a-4afd-b35b-d761f073125a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Típus:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="70" width="60" height="20" uuid="3d58ebec-0929-4468-a81e-570de0f3a959"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Méret:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="70" width="170" height="20" uuid="9d343f6a-4051-4716-bbaa-2bf7a058dacb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gyarto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="90" width="170" height="20" uuid="28153360-f88b-41d6-9ff0-a7c88790f23a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tipus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="70" width="215" height="20" uuid="822883d6-f285-407d-aa8a-120ad31714cb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{meret}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="300" height="20" uuid="51c97c82-dc89-4d74-b437-b673ccd12d53"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Szűrési feltételek]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="90" width="60" height="20" uuid="fac8c7ae-b583-4d3b-bf94-d903acd6193d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Állapot:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="90" width="215" height="20" uuid="9aeec317-ee46-45d9-9a71-6c0cd1680834"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{allapot}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="28" uuid="116917a6-7c89-444c-b186-08436132c589"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Név]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="28" uuid="393db2a0-82b9-40d7-b83b-6e2aba1f5210"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gyártó]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="28" uuid="99a3fa64-89d0-425f-bf28-08611755f815"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Típus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="28" uuid="fc11f8ab-91c2-4232-8087-5ec1e552345f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Méret]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<textField>
+				<reportElement x="0" y="0" width="141" height="25" uuid="ef9896e8-221d-4973-adc3-b62c383f39c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nev}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="25" uuid="cbf14eda-98c4-4f5c-ba0d-250dc1eccd2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{gyarto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="25" uuid="bc34b995-47f5-49e0-9c71-810c1363da3d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tipus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="25" uuid="89fb0c4f-8c5b-4078-aaf5-6116521a1bf7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{meret}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="459" y="10" width="100" height="30" uuid="b255d3d9-e513-4368-90f7-f2f551c61a06"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

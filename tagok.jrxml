@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tagok" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4c37b5d1-c50f-4d91-8db5-61f8a2d1b3ae">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="allapot" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nev" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="telefonszam" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="167" y="0" width="220" height="41" uuid="4981a9c2-f942-478c-bbf1-6a69608dfbdb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tagok listája]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="0" width="100" height="30" uuid="aff04f32-e76a-4459-8a46-5c36bc74ee64"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="111" height="23" uuid="b77f8e6c-c6ec-4fa1-b000-349d35223be9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Szűrési feltétel:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="40" width="290" height="23" uuid="0b2c52be-f9f5-4a69-935e-39fc9d298534"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{allapot}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="6" width="180" height="30" uuid="1bc618f3-4046-491b-ba3d-7f453ff2ba9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Név]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="6" width="180" height="30" uuid="305a96e8-057e-4327-8170-73aa493575a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="6" width="180" height="30" uuid="532664ea-65b9-4544-bd61-83aad8d42a3a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefonszám]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="180" height="30" uuid="599e864f-1a94-4fee-95c6-6287e3532d28"/>
+				<textFieldExpression><![CDATA[$F{nev}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="0" width="180" height="30" uuid="dca25576-d44f-402d-bda1-d71fbfb2c271"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="0" width="180" height="30" uuid="d612da1c-9896-468e-9f03-c6357991ab30"/>
+				<textFieldExpression><![CDATA[$F{telefonszam}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="470" y="0" width="100" height="30" uuid="b43e82e7-399a-4430-8a4b-180d39473ad5"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
